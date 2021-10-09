@@ -190,6 +190,28 @@ namespace App_AngelaStore.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
+            
+                     migrationBuilder.CreateTable(
+                name: "t_proforma",
+                columns: table => new
+                {
+                    id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    UserID = table.Column<string>(type: "text", nullable: true),
+                    ProductoID = table.Column<int>(type: "integer", nullable: true),
+                    Stock = table.Column<int>(type: "integer", nullable: false),
+                    Precio = table.Column<decimal>(type: "numeric", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_t_proforma", x => x.id);
+                    table.ForeignKey(
+                        name: "FK_t_proforma_t_productos_ProductoID",
+                        column: x => x.ProductoID,
+                        principalTable: "t_productos",
+                        principalColumn: "id",
+                        onDelete: ReferentialAction.Restrict);
+                });
 
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
@@ -227,6 +249,11 @@ namespace App_AngelaStore.Migrations
                 table: "AspNetUsers",
                 column: "NormalizedUserName",
                 unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_t_proforma_ProductoID",
+                table: "t_proforma",
+                column: "ProductoID");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -250,13 +277,16 @@ namespace App_AngelaStore.Migrations
                 name: "t_contactanos");
 
             migrationBuilder.DropTable(
-                name: "t_productos");
+                name: "t_proforma");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");
 
             migrationBuilder.DropTable(
                 name: "AspNetUsers");
+
+            migrationBuilder.DropTable(
+                name: "t_productos");
         }
     }
 }
