@@ -14,6 +14,7 @@ namespace App_AngelaStore.Data
         }
                  public DbSet<App_AngelaStore.Models.Contactanos> DataContactanos { get; set; }
                  public DbSet<App_AngelaStore.Models.Producto> Productos { get; set; }
+                 public DbSet<App_AngelaStore.Models.Proforma> DataProforma { get; set; }
 
     }
 }
