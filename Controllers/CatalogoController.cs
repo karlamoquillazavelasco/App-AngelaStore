@@ -9,20 +9,22 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using App_AngelaStore.Models;
 using App_AngelaStore.Data;
+using Microsoft.AspNetCore.Identity;
 
 namespace App_AngelaStore.Controllers
 {
     public class CatalogoController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-
+private readonly UserManager<IdentityUser> _userManager;
         private readonly ApplicationDbContext _context;
 
         public CatalogoController(ILogger<HomeController> logger,
-            ApplicationDbContext context)
+            ApplicationDbContext context , UserManager<IdentityUser> userManager)
         {
             _logger = logger;
             _context = context;
+            _userManager = userManager;
         }
 
         public IActionResult Index()
@@ -30,6 +32,8 @@ namespace App_AngelaStore.Controllers
             var listContactos=_context.Productos.OrderBy(y => y.Codigo).OrderBy(x => x.Descripcion).ToList();
             return View(listContactos);
         }
+
+        
 
         // GET: Contacto/Edit/5
         public async Task<IActionResult> Info(int? id)
@@ -46,5 +50,26 @@ namespace App_AngelaStore.Controllers
             }
             return View(contacto);
         }
+
+         public async Task<IActionResult> Add(int? id)
+        {
+            var userID = _userManager.GetUserName(User);
+            if(userID == null){
+                ViewData["Message"] = "Por favor debe loguearse antes de agregar un producto";
+                List<Producto> productos = new List<Producto>();
+                return  View("Index",productos);
+            }else{
+                var producto = await _context.Productos.FindAsync(id);
+                Proforma proforma = new Proforma();
+                proforma.Producto = producto;
+                proforma.Precio = producto.Precio;
+                proforma.Stock = 1;
+                proforma.UserID = userID;
+                _context.Add(proforma);
+                await _context.SaveChangesAsync();
+                return  RedirectToAction(nameof(Index));
+            }
+        }
+
     }
 }
