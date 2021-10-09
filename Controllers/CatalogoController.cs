@@ -10,7 +10,6 @@ using Microsoft.EntityFrameworkCore;
 using App_AngelaStore.Models;
 using App_AngelaStore.Data;
 using Microsoft.AspNetCore.Identity;
-
 namespace App_AngelaStore.Controllers
 {
     public class CatalogoController : Controller
