@@ -4,7 +4,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace App_AngelaStore.Migrations
 {
-    public partial class initial : Migration
+    public partial class inicial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -190,8 +190,8 @@ namespace App_AngelaStore.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
-            
-                     migrationBuilder.CreateTable(
+
+            migrationBuilder.CreateTable(
                 name: "t_proforma",
                 columns: table => new
                 {
