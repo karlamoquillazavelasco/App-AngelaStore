@@ -8,19 +8,19 @@
 <br>
 <br>
 <div class="section-title" style="text-align: center;">
-          <h2 >Prendas Registrados</h2>
+          <h2 >Prendas Registradas</h2>
           <p>Visualiza todos las Prendas registrados de nuestra almacen</p>
           <p>
     <button class="btn btn-success"  onclick="window.location='@Url.Action("Index", "Producto")'">Registrar</button>
 </p>
 </div>
 
-<div class="container" >
+<div class="container" style="text-align: center;">
 <table class="table table-hover">
     <thead class="tables">
         <tr class="center">
                 <th scope="col">
-                    #
+                    Opciones
                 </th>
                 <th scope="col">
                     @Html.DisplayNameFor(model => model.Codigo)
@@ -41,7 +41,7 @@
 
     @foreach (var item in Model)
     {
-        <tr class="center">
+        <tr class="center" >
             <th scope="row">
                 <a asp-action="Edit" asp-route-id="@item.ID">Edit</a>| 
                 <a asp-action="Delete" asp-route-id="@item.ID" id="delete">Delete</a>
@@ -55,8 +55,8 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Precio)
             </td>
-            <td>
-               <div class="card img" style="width: 12rem;">
+            <td style="text-align: center;">
+               <div class="card img" style="width: 12rem;" >
                <img src="@item.imagen" class="card-img-top"  alt="...">
                <div class="card-body">
 
