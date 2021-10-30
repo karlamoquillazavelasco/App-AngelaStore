@@ -7,18 +7,21 @@
 
 <br>
 <br>
+<p> </p>
+<p> </p>
 <div class="section-title" style="text-align: center;">
-          <h2 >Prendas Registradas</h2>
-          <p>Visualiza todos las Prendas registrados de nuestra almacen</p>
+          <h1 style="font-family: Georgia, Times, Times New Roman, serif;color:#000000" ><strong>Prendas Registradas</strong></h1>
+          <h6 style="font-family: Georgia, Times, Times New Roman, serif;color:#000000">Visualiza todos las Prendas registrados de nuestra almacen</h6>
           <p>
-    <button class="btn btn-success"  onclick="window.location='@Url.Action("Index", "Producto")'">Registrar</button>
+              <p></p>
+    <button class="btn btn-dark"  onclick="window.location='@Url.Action("Index", "Producto")'">Registrar</button>
 </p>
 </div>
-
+<p> </p>
 <div class="container" style="text-align: center;">
 <table class="table table-hover">
-    <thead class="tables">
-        <tr class="center">
+    <thead class="thead-dark">
+        <tr class="center" >
                 <th scope="col">
                     Opciones
                 </th>
@@ -43,22 +46,22 @@
     {
         <tr class="center" >
             <th scope="row">
-                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a>| 
-                <a asp-action="Delete" asp-route-id="@item.ID" id="delete">Delete</a>
+                <a  class="btn btn-info" asp-action="Edit" asp-route-id="@item.ID">Editar</a>
+                <a  class="btn btn-danger" asp-action="Delete" asp-route-id="@item.ID" id="delete">Eliminar</a>
             </th>
-            <td>
+            <td  style="color:#000000;font-family:Rockwell, Courier Bold, Courier, Georgia, Times, Times New Roman, serif">
                 @Html.DisplayFor(modelItem => item.Codigo)
             </td>
-            <td>
+            <td  style="color:#000000;font-family:Rockwell, Courier Bold, Courier, Georgia, Times, Times New Roman, serif">
                 @Html.DisplayFor(modelItem => item.Marca)
             </td>
-            <td>
+            <td  style="color:#000000;font-family:Rockwell, Courier Bold, Courier, Georgia, Times, Times New Roman, serif">
                 @Html.DisplayFor(modelItem => item.Precio)
             </td>
             <td style="text-align: center;">
-               <div class="card img" style="width: 12rem;" >
-               <img src="@item.imagen" class="card-img-top"  alt="...">
-               <div class="card-body">
+               <div class="card img;border border-dark" style="width: 12rem;text-align: center;" >
+               <img src="@item.imagen" class="card-img-top;"  alt="...">
+               
 
             </td>
 

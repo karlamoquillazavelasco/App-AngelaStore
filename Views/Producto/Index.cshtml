@@ -5,19 +5,22 @@
 }
 
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-
+<p> </p>
+<p> </p>
+<p> </p>
 <section id="catalogue" class="catalogue section-bg" style="text-align: center;">
-<div class="section-title">
-          <h2 >Registro de Prendas</h2>
-          <p>Registra las Prenda completando el siguiente formulario</p>
-</div>
+<div class="section-title" style="text-align: center;">
+      <h1 data-aos="fade-in" style="font-family: Georgia, Times, Times New Roman, serif;color:#000000"><strong>Registrar Producto</strong></h1>
+      <h6 data-aos="fade-in" style="font-family: Georgia, Times, Times New Roman, serif;">Complete los campos con informacion de la prenda</h6>
+			<p> </p>
+  </div>
 
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-md-4">
 
    <form asp-controller="Producto" asp-action="Enviar">
-       <div class="form-group formM">
+       <div class="form-group formM" style="text-align: left;">
             <label asp-for="Marca" class="colorForm"></label>
                 <input asp-for="Marca" class="form-control"/>
                 <span asp-validation-for="Marca" class="text-danger"></span>
@@ -76,8 +79,8 @@
             </div> 
 
               <div class="form-group text-center" >
-              <button type="submit" class="btn btn-success">Registrar</button>
-               <button asp-action="Listar" class="btn btn-success">Almacen</button>
+              <button type="submit" class="btn btn-dark">Registrar</button>
+               <button asp-action="Listar" class="btn btn-info">Almacen</button>
               <button asp-action="Listar" class="btn btn-danger"> Cancelar</button>
               </div>
               
