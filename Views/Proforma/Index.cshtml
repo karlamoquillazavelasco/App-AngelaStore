@@ -3,21 +3,20 @@
 @{
     ViewData["Title"] = "Index";
 }
-
-<div class="card text-center" >
-  <div class="card-header" >
-  </div>
-  <div class="card-body" style="background: #172774 ;">
-    <h5 class="card-title"><h2 style="-webkit-text-stroke: 2px  black;color: #FEF5ED; text-align: center;  font-size: 50px;"> Carrito</h2></h5>
-    <p class="card-text">
-    </p>
-  </div>
-  <div class="card-footer text-muted">
-  </div>
+<p> </p>
+<p> </p>
+<div class="container" >
+  
+  <div class="section-title" style="text-align: center;">
+          <h1 data-aos="fade-in" style="font-family: Georgia, Times, Times New Roman, serif;color:#000000"><strong>Carrito de Compras</strong> </h1>
+          <h6 data-aos="fade-in" style="font-family: Georgia, Times, Times New Roman, serif;">Verifique sus prendas y cantidad a pagar</h6>
+			<p> </p>
+		</div>
+  
 </div>
 
 
-<table class="table">
+<table class="table" style="text-align: center;">
     <thead>
         <tr>
            
@@ -31,8 +30,8 @@
                 @Html.DisplayNameFor(model => model.Precio)
             </th>
 
-            <th>
-                <p>.</p>
+            <th>Opciones
+                
             </th>
         </tr>
     </thead>
@@ -49,10 +48,10 @@
             <td >
                 @Html.DisplayFor(modelItem => item.Precio)
             </td>
-            <td>
+            <td style="text-align: center;">
                
-                <a asp-action="Edit" class="btn btn-info"  style="background: #A2D2FF"  asp-route-id="@item.Id">Editar</a>
-                <a asp-action="Delete" class="btn btn-info"   style="background: #A2D2FF" asp-route-id="@item.Id">Borrar</a>
+                <a asp-action="Edit" class="btn btn-succses"  style="background: #4E9F3D;color-border:#32502E"  asp-route-id="@item.Id">Editar</a>
+                <a asp-action="Delete" class="btn btn-danger"   style="background: #8E0505;color-border:#3D0000" asp-route-id="@item.Id">Eliminar</a>
 
             </td>
         </tr>
@@ -87,8 +86,8 @@
                                 <hr />
                                 <tr>
                                    
-                               <span class="d-inline-block" tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-content="Disabled popover" style=" margin-left:35%;">  
-                                    <button class="btn btn-info" type="button" disabled >Total : S/. @total</button>
+                               <span class="d-inline-block" tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-content="Disabled popover" style=" margin-left:45%;">  
+                                    <button class="btn btn-dark" type="button" disabled >Total : S/. @total</button>
                                 </span>
                                 </tr>
 
