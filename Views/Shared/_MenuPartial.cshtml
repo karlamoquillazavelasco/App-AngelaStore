@@ -17,13 +17,14 @@
  
 
     }else{
+        
       
     <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
+                        <li class="nav-item" >
                             <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Inicio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-controller="Catalogo" asp-action="Index">Catalogo</a>
+                            <a class="nav-link text-white" asp-area="" asp-controller="Catalogo" asp-action="Index" >Catalogo</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-white" asp-area="" asp-controller="Nosotros" asp-action="Index">Nosotros</a>
@@ -36,12 +37,12 @@
         <a class="nav-link text-white bi bi-cart" asp-area="" asp-controller="Proforma" asp-action="Index"><img src="~/img/carroblanco.png"class="carrito" width="40"></a>
     </li>  
                          
-                    </ul>
+    </ul>
     }
 }
 else
 {
-       <ul class="navbar-nav flex-grow-1">
+       <ul class="navbar-nav flex-grow-1" style="font-family: Georgia, Times, Times New Roman">
                         <li class="nav-item">
                             <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Inicio</a>
                         </li>
