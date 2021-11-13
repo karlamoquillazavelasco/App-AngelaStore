@@ -4,46 +4,42 @@
 }
 <br>
 <br>
+<p> </p>
+<p> </p>
 <div class="container">
     <div class="card" style="border: none;">
         <div class="row">
             <div class="col-md-4">
-                <div class="card mb-4">
+                
                     <a asp-area="" asp-controller="Home" asp-action="Info">
                     <img class="card-img-top" 
                     style="height: 500px; width: 100%; " src="@Model.imagen">
                     </a>
-                </div>
+                
             </div>
-            <div class="col-md-4">
-                <h4 style="text-align: center;" class="colorForm">@Model.Codigo</h4>
-                <hr>
-                <ul class="list-unstyled">
-                    <li>
-                        <p class="colorForm">DESCRIPCIÓN: @Model.Descripcion</p>
-                        <hr>
-                    </li>
-                    <li>
-                        <p Class="colorForm">Marca: @Model.Marca</p>
-                       
-                    </li>
-                </ul>
-            </div>
-            <div class="col-md-4">
-                <h4 style="text-align: center;" class="colorForm">PRECIO</h4>
-                <hr>
-                <ul class="list-unstyled" style="text-align: center;">
-                    <li class="colorForm">@Model.Precio</li>
-                    <hr>
+            <div class="col-md-8">
+                <p> </p>
+                <h2 style="text-align: center;">Información</h2>
+                <p> </p>
+                <h4><li><strong>Modelo:</strong> @Model.Codigo </li></h4>
+                <h4><li><strong>Marca:</strong> @Model.Marca</li></h4>
+                <h4><li><strong>Descripción:</strong> @Model.Descripcion</li></h4>
+                <h4><li><strong>Precio:</strong> S/.@Model.Precio</li></h4>
+                <p> </p> 
+                <p> </p>
+                <p> </p>   
+                <ul class="list-unstyled" style="text-align: center;">                   
                     <li><a asp-controller="Orden" asp-action="AddItem" asp-route-id="@Model.ID" class="btn btn-success"><i class="icofont-cart"></i> Agregar</a></li>
                 </ul>
             </div>
+            
         </div>
     </div>
     
     <div class="container">
+        <p> </p>
         <hr>
-        <h3>Mas modelos </h3>
+        <h3>Otras Prendas </h3>
         <hr>
         <div class="row">
             <div class="col-md-4" style="width: 100%;">

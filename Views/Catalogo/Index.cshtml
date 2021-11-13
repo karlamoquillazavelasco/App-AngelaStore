@@ -8,7 +8,7 @@
 <section id="catalogue" class="catalogue section-bg">
       	<div class="container"> <p> </p>
         <div class="section-title" style="text-align: center;">
-          <h1 data-aos="fade-in" style="font-family: Georgia, Times, Times New Roman, serif;color:#000000"><strong>Nuestras Prendas</strong> </h1>
+          <h1 data-aos="fade-in" style="color:#000000;"><strong style="font-family: Georgia, Times, Times New Roman, serif;">Nuestras Prendas</strong> </h1>
           <h6 data-aos="fade-in" style="font-family: Georgia, Times, Times New Roman, serif;">Las mejores prendas de vestir con el mejor material</h6>
 			<p> </p>
 		</div>
@@ -22,13 +22,13 @@
             </div>
 			<div class="catalogo;" style="height: 250px;background-color:#F3F4ED"> <!--Color card descripcion-->
 				<div style="text-align:center;" class="card-body"  >
-					<h5 class="card-title" style="color:#000000;font-family:Rockwell, Courier Bold, Courier, Georgia, Times, Times New Roman, serif"><strong>@Html.DisplayFor(modelItem => item.Marca)</strong></h5>
+					<h5 class="card-title" style="color:#000000;"><strong style="font-family:Rockwell, Courier Bold, Courier, Georgia, Times, Times New Roman, serif;">@Html.DisplayFor(modelItem => item.Marca)</strong></h5>
 						<p class="card-text" style="color:#000000;font-family: Palatino, Palatino Linotype, Palatino LT STD, Book Antiqua, Georgia, serif;">@Html.DisplayFor(modelItem => item.Descripcion)</p>
 					<div style="margin-top: 9px;">
-						<h5 style="text-align: center;color:#000000;font-family:Rockwell, Courier Bold, Courier, Georgia, Times, Times New Roman, serif"><a  disabled><i class="icofont-price" ></i><strong> S/ @Html.DisplayFor(modelItem => item.Precio)</strong></a></h5>
+						<h5 style="text-align: center;color:#000000;"><a  disabled><i class="icofont-price" ></i><strong style="font-family:Rockwell, Courier Bold, Courier, Georgia, Times, Times New Roman, serif;"> S/ @Html.DisplayFor(modelItem => item.Precio)</strong></a></h5>
 						<div class="col" style="text-align: center;">
-             			 	<a asp-action="Add" asp-route-id="@item.ID" class="btn btn-primary"><i class="icofont-cart"></i> Agregar</a>
-              				<a asp-action="Info" asp-route-id="@item.ID" class="btn btn-primary"><i class="icofont-info-circle"></i> Leer más</a>
+             			 	<a asp-action="Add" asp-route-id="@item.ID" class="btn btn-primary" style="font-family:Rockwell, Courier Bold, Courier, Georgia, Times, Times New Roman, serif;"><i class="icofont-cart"></i> Agregar</a>
+              				<a asp-action="Info" asp-route-id="@item.ID" class="btn btn-info" style="font-family:Rockwell, Courier Bold, Courier, Georgia, Times, Times New Roman, serif;"><i class="icofont-info-circle" ></i> Leer más</a>
 						</div>
 					</div>
 				</div>

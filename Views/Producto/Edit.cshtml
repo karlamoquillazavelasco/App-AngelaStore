@@ -10,10 +10,12 @@
 <p> </p>
 <p> </p>
 <div class="section-title">
-          <h1 style="font-family: Georgia, Times, Times New Roman, serif;color:#000000"><strong>Editar Prendas Registrados</strong></h1>
+          <h1 ><strong style="font-family: Georgia, Times, Times New Roman, serif;color:#000000">Editar Prendas Registradas</strong></h1>
           <h6 style="font-family: Georgia, Times, Times New Roman, serif;">Modificar las prendas registradas completando el siguiente formulario</h6>
+
 </div>
 <p> </p>
+
 <div class="container">
 <div class="row justify-content-center">
     <div class="col-md-6" style="font-family:Palatino, Palatino Linotype, Palatino LT STD, Book Antiqua, Georgia, serif">
@@ -28,13 +30,10 @@
             </div>                  
                    
             <div class="form-group formM" style="text-align: left;">
-                <label asp-for="Stock" class="colorForm"></label>
-                <input asp-for="Stock" class="form-control" />
+                <label asp-for="Codigo" class="colorForm"></label>
+                <input asp-for="Codigo" class="form-control" />
             </div>               
-              <div class="form-group formM" style="text-align: left;">
-                <label asp-for="Talla" class="colorForm"></label>
-                <input asp-for="Talla" class="form-control" />
-            </div>      
+               
               <div class="form-group formM" style="text-align: left;">
                 <label asp-for="Material" class="colorForm"></label>
                 <input asp-for="Material" class="form-control" />
@@ -46,11 +45,18 @@
               <div class="form-group formM" style="text-align: left;">
                 <label asp-for="Color" class="colorForm"></label>
                 <input asp-for="Color" class="form-control" />
-            </div>      
+            </div>
+            <div class="form-group formM" style="text-align: left;">
+                <label asp-for="Stock" class="colorForm"></label>
+                <input asp-for="Stock" class="form-control" />
+            </div>
               <div class="form-group formM" style="text-align: left;">
                 <label asp-for="Precio" class="colorForm"></label>
                 <input asp-for="Precio" class="form-control" />
-           
+            <div class="form-group formM" style="text-align: left;">
+                <label asp-for="Descripcion" class="colorForm"></label>
+                <input asp-for="Descripcion" class="form-control" />
+            </div>
             <div class="form-group formM" style="text-align: left;">
                 <label asp-for="imagen" class="colorForm"></label>
                 <input asp-for="imagen" class="form-control" />
