@@ -76,6 +76,9 @@
 </div>
 </section>
 
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
 <script>
     document.querySelector('#Editar').addEventListener('submit', function(e) {
       var form = this;

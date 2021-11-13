@@ -13,11 +13,11 @@
     <div class="col-md-5">
         <section>
             <form id="account" method="post" class="contenedor text-center">
-                <h3 class="text-center">Ingresa con su <strong>Cuenta</strong> </h3>
+                <h3 class="text-center"><strong style="font-family: Georgia, Times, Times New Roman;color:#000000;">Bienvenido</strong> </h3>
                 <hr />
                 <div asp-validation-summary="All" class="text-danger"></div>
                
-                <div class="form-group">
+                <div class="form-group" >
                     <label asp-for="Input.Email"></label>
                     <input asp-for="Input.Email" class="form-control" />
                     <span asp-validation-for="Input.Email" class="text-danger"></span>
@@ -45,9 +45,7 @@
                     <p>
                         <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">Registrarse como usuario nuevo</a>
                     </p>
-                    <p>
-                        <a id="resend-confirmation" asp-page="./ResendEmailConfirmation">Reenviar correo de confirmación</a>
-                    </p>
+                   
                 </div>
             </form>
         </section>

@@ -5,15 +5,15 @@
 <p> </p>
 <div class="container" >
   
-  <div class="card-body" >
-    <h5 class="card-title"><h2 style="-webkit-text-stroke: 2px  black;color: #3F0713; text-align: center;  font-size: 50px;"> Proceso de Pago </h2></h5>
-    <p class="card-text">
-    </p>
-  </div>
+ <div class="section-title" style="text-align: center;">
+          <h1 data-aos="fade-in" style="color:#000000;"><strong style="font-family: Georgia, Times, Times New Roman, serif;">Pago</strong> </h1>
+          <h6 data-aos="fade-in" style="font-family: Georgia, Times, Times New Roman, serif;">Por favor complete sus datos para poder completar la compra</h6>
+			<p> </p>
+		</div>
   
 </div>
 <main>
-    <div><h3 style="margin-top: 5%;">Ingrese sus Datos</h3></div>
+    <div><h3 style="margin-top: 5%;">Datos:</h3></div>
         <div class="container">
             <div class="row mt-3">
                 <div class="col">
@@ -23,44 +23,49 @@
   <div class="col">
     <!-- Name input -->
     <div class="form-outline" >
-      <input type="text" id="form8Example1" class="form-control"  style="border-width: 2px; border-color: #030303 ;" />
       <label class="form-label" for="form8Example1" >Nombres</label>
+      <input type="text" id="form8Example1" class="form-control"  style="border-width: 2px; border-color: #030303 ;" />
+      
     </div>
   </div>
   <div class="col">
     <!-- Email input -->
     <div class="form-outline">
-      <input type="email" id="form8Example2" class="form-control" style="border-width: 2px; border-color: #030303 ;"/>
       <label class="form-label" for="form8Example2" style="border-color: #030303 ;">Direccion</label>
+      <input type="email" id="form8Example2" class="form-control" style="border-width: 2px; border-color: #030303 ;"/>
+      
     </div>
   </div>
 </div>
+<h2></h2>
 <div class="row">
   <div class="col">
     <!-- Name input -->
     <div class="form-outline">
-      <input type="text" id="form8Example3" class="form-control" style="border-width: 2px; border-color: #030303 ;" />
       <label class="form-label" for="form8Example3">Apellido Paterno</label>
+      <input type="text" id="form8Example3" class="form-control" style="border-width: 2px; border-color: #030303 ;" />
+      
     </div>
   </div>
   <div class="col">
     <!-- Name input -->
     <div class="form-outline">
-      <input type="text" id="form8Example4" class="form-control" style="border-width: 2px; border-color: #030303 ;" />
       <label class="form-label" for="form8Example4">Apellido materno</label>
+      <input type="text" id="form8Example4" class="form-control" style="border-width: 2px; border-color: #030303 ;" />
+      
     </div>
   </div>
   <div class="col">
     <!-- Email input -->
     <div class="form-outline">
-      <input type="email" id="form8Example5" class="form-control" style="border-width: 2px; border-color: #030303 ;" />
       <label class="form-label" for="form8Example5">Email</label>
+      <input type="email" id="form8Example5" class="form-control" style="border-width: 2px; border-color: #030303 ;" />
+      
     </div>
   </div>
 </div>
         <hr class="mb-4">
-        <label class="mb-3 colorForm" >Tipo</label>
-
+        <label class="mb-3 colorForm" >Seleccione tipo de Tarjeta:</label>
         <div class="d-block my-3 formM">
           <div class="custom-control custom-radio">
             <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" style="background-color: #213B52;" checked="" required="">
@@ -72,6 +77,7 @@
           </div>
         </div>
         <div class="row">
+          
           <div class="col-md-6 mb-3 formM">
             <label for="cc-name" class="colorForm">Nombre del Propietario de la Tarjeta</label>
             <input type="text" class="form-control" id="cc-name" placeholder="Ingresa el nombre del propietario de la tarjeta" style="border-width: 2px; border-color: #030303 ;" required="">

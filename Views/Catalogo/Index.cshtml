@@ -27,7 +27,7 @@
 					<div style="margin-top: 9px;">
 						<h5 style="text-align: center;color:#000000;"><a  disabled><i class="icofont-price" ></i><strong style="font-family:Rockwell, Courier Bold, Courier, Georgia, Times, Times New Roman, serif;"> S/ @Html.DisplayFor(modelItem => item.Precio)</strong></a></h5>
 						<div class="col" style="text-align: center;">
-             			 	<a asp-action="Add" asp-route-id="@item.ID" class="btn btn-primary" style="font-family:Rockwell, Courier Bold, Courier, Georgia, Times, Times New Roman, serif;"><i class="icofont-cart"></i> Agregar</a>
+             			 	<a asp-action="Add" asp-route-id="@item.ID" class="btn btn-primary" style="font-family:Rockwell, Courier Bold, Courier, Georgia, Times, Times New Roman, serif;"><i class="icofont-cart"></i> Agregar <img src="~/img/carro.png"class="carrito" width="26"> </a>
               				<a asp-action="Info" asp-route-id="@item.ID" class="btn btn-info" style="font-family:Rockwell, Courier Bold, Courier, Georgia, Times, Times New Roman, serif;"><i class="icofont-info-circle" ></i> Leer más</a>
 						</div>
 					</div>

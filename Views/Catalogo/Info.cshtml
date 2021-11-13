@@ -19,17 +19,17 @@
             </div>
             <div class="col-md-8">
                 <p> </p>
-                <h2 style="text-align: center;">Información</h2>
+                <h2 style="text-align: center;"> <strong style="font-family: Georgia, Times, Times New Roman, serif;color:#000000;">Información</strong></h2>
                 <p> </p>
-                <h4><li><strong>Modelo:</strong> @Model.Codigo </li></h4>
-                <h4><li><strong>Marca:</strong> @Model.Marca</li></h4>
-                <h4><li><strong>Descripción:</strong> @Model.Descripcion</li></h4>
-                <h4><li><strong>Precio:</strong> S/.@Model.Precio</li></h4>
+                <h5><li style="color:#000000;font-family: Palatino, Palatino Linotype, Palatino LT STD, Book Antiqua, Georgia, serif;"><strong style="font-family:Rockwell, Courier Bold, Courier, Georgia, Times, Times New Roman, serif;">Modelo:</strong> @Model.Codigo </li></h5>
+                <h5><li style="color:#000000;font-family: Palatino, Palatino Linotype, Palatino LT STD, Book Antiqua, Georgia, serif;"><strong style="font-family:Rockwell, Courier Bold, Courier, Georgia, Times, Times New Roman, serif;">Marca:</strong> @Model.Marca</li></h5>
+                <h5><li style="color:#000000;font-family: Palatino, Palatino Linotype, Palatino LT STD, Book Antiqua, Georgia, serif;"><strong style="font-family:Rockwell, Courier Bold, Courier, Georgia, Times, Times New Roman, serif;">Descripción:</strong> @Model.Descripcion</li></h5>
+                <h5><li style="color:#000000;font-family:Rockwell, Courier Bold, Courier, Georgia, Times, Times New Roman, serif;"><strong style="font-family:Rockwell, Courier Bold, Courier, Georgia, Times, Times New Roman, serif;">Precio:</strong> S/.@Model.Precio.00</li></h5>
                 <p> </p> 
                 <p> </p>
                 <p> </p>   
                 <ul class="list-unstyled" style="text-align: center;">                   
-                    <li><a asp-controller="Orden" asp-action="AddItem" asp-route-id="@Model.ID" class="btn btn-success"><i class="icofont-cart"></i> Agregar</a></li>
+                    <li><a asp-controller="Orden" asp-action="AddItem" asp-route-id="@Model.ID" class="btn btn-success" style="font-family:Rockwell, Courier Bold, Courier, Georgia, Times, Times New Roman, serif;"><i class="icofont-cart"></i> Agregar <img src="~/img/carro.png"class="carrito" width="26"></a></li>
                 </ul>
             </div>
             
@@ -39,7 +39,7 @@
     <div class="container">
         <p> </p>
         <hr>
-        <h3>Otras Prendas </h3>
+        <h3 style="text-align: center;">Otras Prendas </h3>
         <hr>
         <div class="row">
             <div class="col-md-4" style="width: 100%;">
