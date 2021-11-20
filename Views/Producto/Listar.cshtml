@@ -3,14 +3,12 @@
     ViewData["Title"] = "Productos";
 }
 
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-
 <br>
 <br>
 <p> </p>
 <p> </p>
 <div class="section-title" style="text-align: center;">
-          <h1 style="font-family: Georgia, Times, Times New Roman, serif;color:#000000" ><strong>Prendas Registradas</strong></h1>
+          <h1><strong style="font-family: Georgia, Times, Times New Roman, serif;color:#000000">Prendas Registradas</strong></h1>
           <h6 style="font-family: Georgia, Times, Times New Roman, serif;color:#000000">Visualiza todos las Prendas registrados de nuestro almacen</h6>
           <p>
               <p></p>
@@ -18,12 +16,12 @@
 </p>
 </div>
 <p> </p>
-<div class="container" style="text-align: center;">
-<table class="table table-hover">
-    <thead class="thead-dark">
-        <tr class="center" >
+<table class="table table-hover" style="text-align: center;">
+    <tbody>
+        <thead class="tables" style="background: black;" >
+        <tr class="center"  style="color: white;" >
                 <th scope="col">
-                    Opciones
+                    Imagen de la prenda
                 </th>
                 <th scope="col">
                     @Html.DisplayNameFor(model => model.Codigo)
@@ -32,11 +30,12 @@
                     @Html.DisplayNameFor(model => model.Marca)
                 </th>
                 <th scope="col">
-                    @Html.DisplayNameFor(model => model.Precio)
+                    Precio
                 </th>
                 <th scope="col">
-                    @Html.DisplayNameFor(model => model.imagen)
+                    Opciones
                 </th>
+                
         </tr>
     </thead>
 
@@ -44,11 +43,12 @@
 
     @foreach (var item in Model)
     {
-        <tr class="center" >
-            <th scope="row">
-                <a  class="btn btn-info" asp-action="Edit" asp-route-id="@item.ID">Editar</a>
-                <a  class="btn btn-danger" asp-action="Delete" asp-route-id="@item.ID" id="delete">Eliminar</a>
-            </th>
+        <tr class="center" style="text-align: center;" >
+            <td style="text-align: center;">
+               <img class="card img;border border-dark" width="170" height="200" style="margin-left: 20%;"
+               src="@item.imagen" class="card-img-top;"  alt="...">
+               
+            </td>
             <td  style="color:#000000;font-family:Rockwell, Courier Bold, Courier, Georgia, Times, Times New Roman, serif">
                 @Html.DisplayFor(modelItem => item.Codigo)
             </td>
@@ -56,14 +56,14 @@
                 @Html.DisplayFor(modelItem => item.Marca)
             </td>
             <td  style="color:#000000;font-family:Rockwell, Courier Bold, Courier, Georgia, Times, Times New Roman, serif">
+                S/.
                 @Html.DisplayFor(modelItem => item.Precio)
             </td>
-            <td style="text-align: center;">
-               <div class="card img;border border-dark" style="width: 12rem;text-align: center;" >
-               <img src="@item.imagen" class="card-img-top;"  alt="...">
-               
-
-            </td>
+            <th scope="row">
+                <a  class="btn btn-info" asp-action="Edit" asp-route-id="@item.ID">Editar</a>
+                <a  class="btn btn-danger" asp-action="Delete" asp-route-id="@item.ID" id="delete">Eliminar</a>
+            </th>
+            
 
         </tr>
     }        

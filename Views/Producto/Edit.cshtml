@@ -1,75 +1,73 @@
 @model App_AngelaStore.Models.Producto
 
 @{
-    ViewData["Title"] = "Usuario";
+    ViewData["Title"] = "Angela Store";
 }
-<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
-<section id="catalogue" class="catalogue section-bg" style="text-align: center;">
 <p> </p>
 <p> </p>
 <p> </p>
-<div class="section-title">
+<div class="section-title" style="text-align: center;">
           <h1 ><strong style="font-family: Georgia, Times, Times New Roman, serif;color:#000000">Editar Prendas Registradas</strong></h1>
           <h6 style="font-family: Georgia, Times, Times New Roman, serif;">Modificar las prendas registradas completando el siguiente formulario</h6>
 
 </div>
 <p> </p>
 
-<div class="container">
 <div class="row justify-content-center">
-    <div class="col-md-6" style="font-family:Palatino, Palatino Linotype, Palatino LT STD, Book Antiqua, Georgia, serif">
-        <form asp-controller="Producto" asp-action="Edit">
+    <div class="col-md-6">
+        <form  asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="ID" />
             
-            <div class="form-group formM" style="text-align: left;">
-                <label asp-for="Marca" class="colorForm"></label>
+            <div class="form-group " style="text-align: left;">
+                <strong style="font-family:Rockwell, Courier Bold, Courier, Georgia, Times, Times New Roman, serif;color:#000000;">Marca</strong>
                 <input asp-for="Marca" class="form-control" />
-                <span asp-validation-for="Marca" class="text-danger"></span>
+                
             </div>                  
                    
-            <div class="form-group formM" style="text-align: left;">
-                <label asp-for="Codigo" class="colorForm"></label>
+            <div class="form-group " style="text-align: left;">
+                <strong style="font-family:Rockwell, Courier Bold, Courier, Georgia, Times, Times New Roman, serif;color:#000000;">Codigo</strong>
                 <input asp-for="Codigo" class="form-control" />
+
             </div>               
                
-              <div class="form-group formM" style="text-align: left;">
-                <label asp-for="Material" class="colorForm"></label>
+              <div class="form-group " style="text-align: left;">
+                <strong style="font-family:Rockwell, Courier Bold, Courier, Georgia, Times, Times New Roman, serif;color:#000000;">Material</strong>
                 <input asp-for="Material" class="form-control" />
+
             </div>      
-              <div class="form-group formM" style="text-align: left;">
-                <label asp-for="Descripcion" class="colorForm"></label>
+              <div class="form-group " style="text-align: left;">
+                <strong style="font-family:Rockwell, Courier Bold, Courier, Georgia, Times, Times New Roman, serif;color:#000000;">Descripción</strong>
                 <input asp-for="Descripcion" class="form-control" />
             </div>      
-              <div class="form-group formM" style="text-align: left;">
-                <label asp-for="Color" class="colorForm"></label>
+              <div class="form-group " style="text-align: left;">
+                <strong style="font-family:Rockwell, Courier Bold, Courier, Georgia, Times, Times New Roman, serif;color:#000000;">Color de Prenda</strong>
                 <input asp-for="Color" class="form-control" />
             </div>
-            <div class="form-group formM" style="text-align: left;">
-                <label asp-for="Stock" class="colorForm"></label>
+            <div class="form-group " style="text-align: left;">
+                <strong style="font-family:Rockwell, Courier Bold, Courier, Georgia, Times, Times New Roman, serif;color:#000000;">Cantidad de Prendas en Stock</strong>
                 <input asp-for="Stock" class="form-control" />
             </div>
-              <div class="form-group formM" style="text-align: left;">
-                <label asp-for="Precio" class="colorForm"></label>
+              <div class="form-group " style="text-align: left;">
+                <strong style="font-family:Rockwell, Courier Bold, Courier, Georgia, Times, Times New Roman, serif;color:#000000;">Precio de Prendas</strong>
                 <input asp-for="Precio" class="form-control" />
-            <div class="form-group formM" style="text-align: left;">
-                <label asp-for="Descripcion" class="colorForm"></label>
+            <div class="form-group " style="text-align: left;">
+                <strong style="font-family:Rockwell, Courier Bold, Courier, Georgia, Times, Times New Roman, serif;color:#000000;">Descripcion de Prendas</strong>
                 <input asp-for="Descripcion" class="form-control" />
             </div>
-            <div class="form-group formM" style="text-align: left;">
-                <label asp-for="imagen" class="colorForm"></label>
+            <div class="form-group " style="text-align: left;">
+                <strong style="font-family:Rockwell, Courier Bold, Courier, Georgia, Times, Times New Roman, serif;color:#000000;">URL Prenda </strong>
                 <input asp-for="imagen" class="form-control" />
             </div> 
              
             <div class="form-group center" style="text-align: center;">
                  <button type="submit" class="btn btn-info">Actualizar</button> 
-                <button  class="btn btn-danger"  onclick="window.location='@Url.Action("Listar", "Producto")'" >Cancelar</button> 
+                 <a href="~/Producto/Listar"  class="btn btn-danger" >Regresar a Lista</a>
             </div>                
 
         </form>
             
-        <td>@Html.DisplayTextFor(model => model.Respuesta)</td>    
     
     </div>
 </div>

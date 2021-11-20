@@ -1,0 +1,130 @@
+@model IEnumerable<App_AngelaStore.Models.Proforma>
+
+@{
+    ViewData["Title"] = "Documento";
+}
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ContactPDF</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+
+    <div class="row">
+        <div class="col-sm-4">
+            <img src="~/Img/Angela Store.png" />
+        </div>
+        <div class="col-sm-8 text-center">
+            <h2>BOLETA DE VENTA ELECTRONICA</h2>
+
+
+
+
+
+
+
+        </div>
+    </div>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">
+                    @Html.DisplayNameFor(model => model.Producto.imagen)
+                </th>
+                <th scope="col">
+                    Nombre
+                </th>
+                <th scope="col">
+                    Cantidad
+                </th>
+                <th scope="col">
+                    Precio Unit
+                </th>
+              
+               <th scope="col">
+                    Subtotal
+                </th>
+              
+                
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+               <tr>
+           <td>
+               <img class="img-responsive" width="190" height="200" style="margin-left: 20%;"
+                       src="~/Img/Productos/@item.Producto.imagen" alt="@item.Producto.imagen"  />
+
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Producto.Marca)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Stock)
+            </td>
+            <td>
+                S/.
+                @Html.DisplayFor(modelItem => item.Precio)
+            </td>
+
+
+
+                 @{
+                Decimal total1 = 0;
+               total1 =   item.Precio*item.Stock;
+               
+                }
+                    <td>
+                        <strong>
+                    S/.
+                    @Html.DisplayFor(modelItem => total1)
+                    </strong>
+                </td>
+
+
+
+
+
+            </tr>
+            }
+        </tbody>
+    </table>
+    @{
+          Decimal total = 0;
+
+         var contar = 0;
+      }
+      @foreach (var item in Model){
+         <tr>
+            @{
+               total = total + item.Precio*item.Stock;
+               contar++;
+            }
+         </tr>
+      }
+
+
+
+<div class="container">
+                  <h4>                                                                                                                  ------------------------------- </h4> 
+         <h4>                                                                                                                              TOTAL: S/ @total </h4> 
+           
+            </div>
+           
+            </div>
+    </section>
+
+
+</body>
+</html>

@@ -10,16 +10,17 @@ using Microsoft.EntityFrameworkCore;
 using App_AngelaStore.Models;
 using App_AngelaStore.Data;
 
+
 namespace App_AngelaStore.Controllers
 {
     public class ProductoController : Controller
     {
 
-       private readonly ILogger< ProductoController> _logger;
+       private readonly ILogger<ProductoController> _logger;
        private readonly ApplicationDbContext _context;
 
 
-        public  ProductoController(ILogger< ProductoController> logger,
+        public  ProductoController(ILogger<ProductoController> logger,
             ApplicationDbContext context)
         {
             _logger = logger;
@@ -105,5 +106,7 @@ namespace App_AngelaStore.Controllers
                 }
                 return View("index", objFormulario);
         }
+        
+
     }
 }

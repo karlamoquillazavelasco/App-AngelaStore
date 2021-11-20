@@ -1,92 +1,91 @@
 @{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Angela Store";
 }
 <p> </p>
 <p> </p>
-<div class="container" >
-  
- <div class="section-title" style="text-align: center;">
-          <h1 data-aos="fade-in" style="color:#000000;"><strong style="font-family: Georgia, Times, Times New Roman, serif;">Pago</strong> </h1>
-          <h6 data-aos="fade-in" style="font-family: Georgia, Times, Times New Roman, serif;">Por favor complete sus datos para poder completar la compra</h6>
-			<p> </p>
-		</div>
-  
+
+<div class="container" >  
+  <div class="section-title" style="text-align: center;">
+    <h1 data-aos="fade-in" style="color:#000000;"><strong style="font-family: Georgia, Times, Times New Roman, serif;">Datos de Pago</strong> </h1>
+    <h6 data-aos="fade-in" style="font-family: Georgia, Times, Times New Roman, serif;">Por favor complete sus datos para poder completar la compra</h6>
+  </div>
 </div>
+<p> </p>
 <main>
-    <div><h3 style="margin-top: 5%;">Datos:</h3></div>
-        <div class="container">
-            <div class="row mt-3">
-                <div class="col">
-                    <form id="procesar-pago" action="#">
-                        <div class="row">
-                            
-  <div class="col">
-    <!-- Name input -->
-    <div class="form-outline" >
-      <label class="form-label" for="form8Example1" >Nombres</label>
-      <input type="text" id="form8Example1" class="form-control"  style="border-width: 2px; border-color: #030303 ;" />
-      
+  <div><h5><strong>Datos Personales:</strong></h5></div>
+    <form id="procesar-pago" action="#">
+    <div class="row">
+      <div class="col"> 
+        <!-- Name input -->
+        <div class="form-outline" >
+          <label class="form-label" for="form8Example1" >Nombres</label>
+          <input type="text" id="form8Example1" class="form-control"  style="border-width: 2px; border-color: #030303 ;" />
+        </div>
+      </div>
+      <div class="col">
+        <!-- Email input -->
+        <div class="form-outline">
+          <label class="form-label" for="form8Example2" style="border-color: #030303 ;">Direccion</label>
+          <input type="text" id="form8Example2" class="form-control" style="border-width: 2px; border-color: #030303 ;"/>
+        </div>
+      </div>
     </div>
+      <h2></h2>
+      <div class="row">
+        <div class="col">
+          <!-- Name input -->
+          <div class="form-outline">
+            <label class="form-label" for="form8Example3">Apellido Paterno</label>
+            <input type="text" id="form8Example3" class="form-control" style="border-width: 2px; border-color: #030303 ;" /> 
+          </div>
+        </div>
+        <div class="col">
+          <!-- Name input -->
+          <div class="form-outline">
+            <label class="form-label" for="form8Example4">Apellido materno</label>
+            <input type="text" id="form8Example4" class="form-control" style="border-width: 2px; border-color: #030303 ;" />
+            
+          </div>
+        </div>
+        <div class="col">
+          <!-- Email input -->
+          <div class="form-outline">
+            <label class="form-label" for="form8Example5">Email</label>
+            <input type="email" id="form8Example5" class="form-control" style="border-width: 2px; border-color: #030303 ;" />
+            
+          </div>
+        </div>
   </div>
-  <div class="col">
-    <!-- Email input -->
-    <div class="form-outline">
-      <label class="form-label" for="form8Example2" style="border-color: #030303 ;">Direccion</label>
-      <input type="email" id="form8Example2" class="form-control" style="border-width: 2px; border-color: #030303 ;"/>
-      
-    </div>
-  </div>
-</div>
-<h2></h2>
-<div class="row">
-  <div class="col">
-    <!-- Name input -->
-    <div class="form-outline">
-      <label class="form-label" for="form8Example3">Apellido Paterno</label>
-      <input type="text" id="form8Example3" class="form-control" style="border-width: 2px; border-color: #030303 ;" />
-      
-    </div>
-  </div>
-  <div class="col">
-    <!-- Name input -->
-    <div class="form-outline">
-      <label class="form-label" for="form8Example4">Apellido materno</label>
-      <input type="text" id="form8Example4" class="form-control" style="border-width: 2px; border-color: #030303 ;" />
-      
-    </div>
-  </div>
-  <div class="col">
-    <!-- Email input -->
-    <div class="form-outline">
-      <label class="form-label" for="form8Example5">Email</label>
-      <input type="email" id="form8Example5" class="form-control" style="border-width: 2px; border-color: #030303 ;" />
-      
-    </div>
-  </div>
-</div>
-        <hr class="mb-4">
-        <label class="mb-3 colorForm" >Seleccione tipo de Tarjeta:</label>
+        <p></p>
+        <label class="mb-3 "><h5><strong>Datos de la Tarjeta:</strong></h5></label>
+        
+        <label class="mb-3 "  ></label>
+                    <div class="form-group" id="credit_cards" style="text-align: center;">
+                        <img src="/img/visa.jpg" id="visa">
+                        <img src="/img/mastercard.jpg" id="mastercard">
+                        <img src="/img/amex.jpg" id="amex">
+                    </div>
         <div class="d-block my-3 formM">
           <div class="custom-control custom-radio">
             <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" style="background-color: #213B52;" checked="" required="">
-            <label class="custom-control-label colorForm" for="credit" >Tarjeta de Credito</label>
+            <label class="custom-control-label " for="credit" >Tarjeta de Credito</label>
           </div>
           <div class="custom-control custom-radio formM">
             <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" style="background: #213B52;" required="">
-            <label class="custom-control-label colorForm" for="debit" >Tarjeta de Debito</label>
+            <label class="custom-control-label " for="debit" >Tarjeta de Debito</label>
           </div>
         </div>
         <div class="row">
           
           <div class="col-md-6 mb-3 formM">
-            <label for="cc-name" class="colorForm">Nombre del Propietario de la Tarjeta</label>
+            <label for="cc-name" >Nombre del Propietario de la Tarjeta</label>
             <input type="text" class="form-control" id="cc-name" placeholder="Ingresa el nombre del propietario de la tarjeta" style="border-width: 2px; border-color: #030303 ;" required="">
             <div class="invalid-feedback">
               El nombre es requerido
             </div>
           </div>
           <div class="col-md-6 mb-3 formM">
-            <label for="cc-number" class="colorForm">Numero de la Tarjeta de Credito</label>
+            <label for="cc-number" >Numero de la Tarjeta de Credito</label>
             <input type="text" class="form-control" id="cc-number" placeholder="Ingresa el numero de la tarjeta" required="" style="border-width: 2px; border-color: #030303 ;">
             <div class="invalid-feedback">
               El numero de la tarjeta de credito es requerida
@@ -95,14 +94,14 @@
         </div>
         <div class="row">
           <div class="col-md-6 mb-3 formM">
-            <label for="cc-expiration" class="colorForm">Fecha de Expiración</label>
+            <label for="cc-expiration" >Fecha de Expiración</label>
             <input type="text" class="form-control" id="cc-expiration" placeholder="Fecha de expiración es requerida" required="" style="border-width: 2px; border-color: #030303 ;">
             <div class="invalid-feedback">
             Fecha de expiración es requerida
             </div>
           </div>
           <div class="col-md-6 mb-3 formM">
-            <label for="cc-cvv" class="colorForm">CVV</label>
+            <label for="cc-cvv">CVV</label>
             <input type="text" class="form-control" id="cc-cvv" placeholder="El CVV es requerido" required="" style="border-width: 2px; border-color: #030303 ;" >
             <div class="invalid-feedback">
               El CVV es requerido
@@ -110,16 +109,16 @@
           </div>
         </div>
 
-<hr />
 
+    <p> </p>
 
-                        <div class="row justify-content-around" style=" margin-left:-5%;" >
+                        <div class="row justify-content-around" style=" margin-left:15%;" >
                             <div class="col-xs-12 col-md-4" >
-                                <a href="~/Catalogo" class="btn btn-outline-info" style="width:300px;">Seguir comprando</a>
+                                <a href="~/Catalogo" class="btn btn-warning" style="width:150px;border-color:#D98C00;border-top-width:10px ; "><img src="~/img/boleta.png"class="carrito" width="55"><p> Generar Boleta</p></a>
                             </div>
                             <div class="col-xs-12 col-md-4">
                                 
-                                <button id="btn1" class="btn btn-outline-dark btn1" style="border-radius: 4px; width:300px"> ¡Pagar!</button>
+                               <a href="~/Pro" class="btn btn-success " style="width:150px;border-color:#125C13;border-top-width:10px ; "><img src="~/img/pago.png"class="carrito" width="55"><p>Confirmar Pago</p></a>
                                 
                             </div>
                         </div>
@@ -133,5 +132,5 @@
             </div>
 
         </div>
-    </main>
+</main>
   

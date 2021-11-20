@@ -1,4 +1,5 @@
 using System;
+using App_AngelaStore.Models;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
